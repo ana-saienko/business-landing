@@ -1,0 +1,154 @@
+// main: ../less/style.less
+
+.footer {
+    padding: 88px 0 31px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__box {
+        padding: 0 15px;
+
+        &:first-child {
+            padding-right: 15px;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 24px;
+
+        span {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #B83B5E;
+        }
+    }
+
+    &__text {
+        margin-bottom: 39px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #333333;
+        max-width: 255px;
+    }
+
+    &__social {
+        a {
+            font-size: 16px;
+            color: #B83B5E;
+            transition: all .3s linear;
+            margin-right: 15px;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: #333;
+            }
+        }
+
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        color: #333333;
+        margin-bottom: 23px;
+    }
+
+    &__list-item {
+        margin-bottom: 11px;
+    }
+
+    &__list-link {
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #333333;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__terms {
+        padding-top: 68px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150.6%;
+        color: #333333;
+
+        span {
+            margin-left: 21px;
+        }
+    }
+}
+
+@media (max-width: 1144px) {
+    .footer {
+        &__container {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media (max-width: 848px) {
+    .footer {
+        padding: 0px 0 30px;
+
+        &__box {
+//            flex-basis: 45%;
+//            padding: 0;
+            margin-bottom: 45px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__box--left {
+//            text-align: right;
+        }
+
+        &__text {
+            margin-bottom: 25px;
+        }
+
+        &__box--center {
+//            flex-basis: 100%;
+//            text-align: center;
+        }
+        
+        &__terms {
+            padding-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        &__container {
+            justify-content: space-between;
+        }
+        
+        &__box {
+//            padding: 0;
+        }
+    }
+}

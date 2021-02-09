@@ -1,0 +1,225 @@
+// main: ../less/style.less
+
+.touch {
+    padding: 105px 0 84px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__wrap {
+        flex-basis: 45%;
+        padding: 0 15px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        text-align: left !important;
+    }
+
+    &__subtitle {
+        margin-bottom: 58px;
+        text-align: left !important;
+    }
+
+    &__input {
+        width: 100%;
+        background: #FAFAFA;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 17px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: #828282;
+
+        &::placeholder {
+
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            color: #828282;
+        }
+        
+        &.error {
+            border-color: red;
+        }
+    }
+
+    &__message {
+        min-height: 156px !important;
+    }
+
+    &__btn {
+        width: 160px !important;
+        height: 50px !important;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF !important;
+
+        &:hover {
+            color: #B83B5E !important;
+        }
+    }
+
+    &__right {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 19px;
+        color: #333333;
+        background: #FAFAFA;
+        border-radius: 8px;
+        padding: 85px 95px 111px 95px;
+    }
+
+    &__right-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 38px;
+    }
+
+    &__right-address {
+        padding-left: 42px;
+        margin-bottom: 30px;
+    }
+
+    &__right-mail {
+        padding-left: 42px;
+        margin-bottom: 37px;
+    }
+
+    &__right-email {
+        display: block;
+        margin-bottom: 15px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__right-phones {
+        padding-left: 42px;
+        margin-bottom: 49px;
+    }
+
+    &__right-phone {
+        display: block;
+        margin-bottom: 15px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__right-address,
+    &__right-mail,
+    &__right-phones {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__right-address {
+        &:before {
+            background-image: url('../images/icons/home.svg');
+        }
+    }
+
+    &__right-mail {
+        &:before {
+            background-image: url('../images/icons/mail.svg');
+            top: 0;
+            transform: translateY(0);
+        }
+    }
+
+    &__right-phones {
+        &:before {
+            background-image: url('../images/icons/phone-call.svg');
+            top: 0;
+            transform: translateY(0);
+        }
+    }
+
+    &__right-social {
+        font-size: 18px;
+
+        a {
+            cursor: pointer;
+            margin-right: 24px;
+            transition: all .3s linear;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: #B83B5E;
+            }
+        }
+    }
+}
+
+@media (max-width: 874px) {
+    .touch {
+        padding: 60px 0 60px;
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__wrap {
+            margin-bottom: 15px;
+            flex-basis: 100%;
+        }
+
+        &__right-title,
+        &__title,
+        &__subtitle {
+            text-align: center !important;
+        }
+
+        &__subtitle {
+            margin-bottom: 15px;
+        }
+
+        &__btn {
+            width: 100% !important;
+        }
+
+        &__right {
+            padding: 50px 60px 50px 60px;
+        }
+    }
+}
+
+@media (max-width: 418px) {
+    .touch {
+
+        &__wrap {
+            padding: 0;
+        }
+
+        &__right {
+            padding: 30px;
+        }
+    }
+}

@@ -1,0 +1,213 @@
+// main: ../less/style.less
+
+.header {
+    padding: 28px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        cursor: pointer;
+
+        span {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: #B83B5E;
+        }
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__menu-item,
+    &__menu-link--mob {
+        cursor: pointer;
+    }
+
+    &__menu-item + &__menu-item {
+        margin-left: 65px;
+    }
+
+    &__menu-item,
+    &__register {
+        position: relative;
+
+        &:hover {
+
+            &:after {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: #B83B5E;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            z-index: 1;
+            transition: width .2s linear;
+        }
+    }
+
+    &__menu-link--mob {
+        display: none;
+    }
+
+    &__menu-link,
+    &__register,
+    &__menu-link--mob {
+        font-size: 16px;
+        line-height: 20px;
+        color: #fff;
+        transition: all .2s linear;
+
+        &:hover {
+            color: #B83B5E;
+        }
+    }
+
+    &__signin {
+        margin-left: 24px !important;
+        font-weight: 600;
+        color: #fff;
+        height: 48px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 1167px) {
+    .header {
+        &__container {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__logo {
+            margin-bottom: 15px;
+        }
+
+        &__nav {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .fixed-page {
+        overflow: hidden;
+        /*запрещаем прокручивание страницы при открытом меню*/
+    }
+
+    .header {
+        &__menu {
+            display: block;
+            position: absolute;
+            overflow: auto;
+            top: 80px;
+            left: 0;
+            background: rgba(0, 0, 0, .76);
+            box-shadow: #ccc;
+            width: 100%;
+            box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+            left: -100%;
+            transition: all 0.4s ease;
+
+            &.open-menu {
+                left: 0;
+            }
+        }
+
+        &__menu-item {
+            padding: 15px;
+        }
+
+        &__menu-item + &__menu-item {
+            margin-left: 0;
+        }
+
+        &__menu-link--mob {
+            display: block;
+        }
+
+        &__buttons {
+            display: none;
+        }
+
+        &__container {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__logo {
+            order: 2;
+            margin-left: auto;
+        }
+    }
+
+    .menu-burger__header {
+        order: 1;
+        position: relative;
+        width: 40px;
+        height: 35px;
+        display: block;
+    }
+
+    .menu-burger__header span,
+    .menu-burger__header:after,
+    .menu-burger__header:before {
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+    }
+
+    .menu-burger__header span {
+        top: 16px;
+    }
+
+    .menu-burger__header:after,
+    .menu-burger__header:before {
+        content: '';
+    }
+
+    .menu-burger__header:after {
+        bottom: 5px;
+    }
+
+    .menu-burger__header:before {
+        top: 5px;
+    }
+
+    .menu-burger__header.open-menu span {
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .menu-burger__header.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+
+    .menu-burger__header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+}

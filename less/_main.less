@@ -1,0 +1,85 @@
+// main: ../less/style.less
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../images/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &__container {}
+
+    &__title {
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 80px;
+        color: #FFFFFF;
+        max-width: 635px;
+
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        color: #fff;
+        max-width: 635px;
+
+        margin-bottom: 44px;
+    }
+
+    &__get {
+        margin-bottom: 15px !important;
+        width: 160px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 35px;
+        font-size: 16px;
+        color: #fff;
+        margin-right: 30px !important;
+    }
+
+    &__register.btn {
+        width: 160px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 35px;
+        background: transparent;
+        border: 0.5px solid #B83B5E;
+        color: #B83B5E;
+        font-size: 16px;
+
+        &:hover {
+            background: #B83B5E;
+            border: 0.5px solid transparent;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        &__title {
+            font-size: 45px;
+            line-height: 60px;
+            max-width: 400px;
+        }
+
+        &__subtitle {
+            max-width: 400px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}
+
+@media (max-width: 385px) {
+    .main {
+        &__title {
+            margin-top: 65px;
+            font-size: 35px;
+            line-height: 50px;
+        }
+    }
+}
