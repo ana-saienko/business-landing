@@ -56,30 +56,36 @@ $(document).ready(function () {
             },
         },
     });
-    
-            jQuery(".link2").click(function () {
+
+    jQuery(".link2").click(function () {
         jQuery('html, body').animate({
             scrollTop: jQuery(".about").offset().top
         }, 400);
     });
 
-        jQuery(".link3").click(function () {
+    jQuery(".link3").click(function () {
         jQuery('html, body').animate({
             scrollTop: jQuery(".service").offset().top
         }, 400);
     });
-    
-            jQuery(".link4").click(function () {
+
+    jQuery(".link4").click(function () {
         jQuery('html, body').animate({
             scrollTop: jQuery(".extra").offset().top
         }, 400);
     });
-    
-            jQuery(".link5").click(function () {
+
+    jQuery(".link5").click(function () {
         jQuery('html, body').animate({
             scrollTop: jQuery(".touch").offset().top
         }, 400);
     });
 
+
+    AOS.init({
+        disable: 'phone',
+        offset: 150,
+
+    });
 
 });
