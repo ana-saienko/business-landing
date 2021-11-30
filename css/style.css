@@ -293,6 +293,7 @@
 }
 .service {
   padding: 90px 0 84px;
+  overflow: hidden;
 }
 .service__title {
   margin-bottom: 12px;
